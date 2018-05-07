@@ -1,0 +1,254 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	text-align: center;
+	background-color: black;
+	color: white;
+	font-family: 'Times New Roman', Times, serif;
+}
+
+.flex-row {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+/* Font and color settings for logo bar, navbar and sub */
+.top-head, .top-nav, .foot {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+#main , .sub {
+	color: black;
+}
+
+
+#main {
+	padding-top: 2em;
+	background-color: #F2F2F2;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-column-gap: 2em;
+}
+
+.main-article {
+	background-color: white;
+	box-shadow: 1px 1px 1px lightgray;
+	/* max-width: ; */
+}
+
+.main-article p {
+	font-family: Arial, Helvetica, sans-serif;
+	opacity: .7;
+	line-height: 1.5em;
+}
+
+.main-article img {
+	box-shadow: 0px 5px 10px lightgray;
+	width: 100%;
+}
+
+.main-article-top {
+	padding: 0 1em;
+}
+
+.main-article-top img {
+	box-shadow: none;
+	width: 3em;
+	height: auto;
+}
+
+.main-article-bottom {
+	text-align: left;
+	padding: 0 1em;
+}
+
+.main-article-bottom > *:not(:nth-child(2)) {
+	margin-top: 2em;
+}
+
+.main-article-bottom .category {
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	color: #006992;
+}
+
+.main-col {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-gap: 2em;
+	justify-content: center;
+}
+
+.main-colLeft, .main-colMiddle, .main-colRight {
+}
+
+.opacity {
+	opacity: 0.2;
+}
+
+.paddingTopBottom {
+	margin: 2em 0;
+}
+
+.sub {
+	background-color: white;
+}
+
+.tag {
+	display: inline-block;
+	padding: .3em 1.5em;
+	font-family: Arial, Helvetica, sans-serif;
+	font-variant: small-caps;
+	letter-spacing: 1px;
+	border-radius: 3px;
+}
+
+.top {
+	grid-area: top;
+	background: linear-gradient(rgba(10, 10, 10, 0.7),rgba(10, 10, 10, 0.7)), url("src/hero-bg.jpg");
+}
+
+.top-content {
+	margin-top: 4em;
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	grid-template-areas:
+		"music management"
+		"music lifestyle";
+	background-color: black;
+}
+
+.top-content > div {	
+	position: relative;
+	opacity: .7;
+}
+
+
+.top-content > div > img {
+	display: block;
+	width: 100%;
+	opacity: .7;
+}
+
+.top-content .lifestyle {
+	grid-area: lifestyle;
+}
+
+.top-content .management {
+	grid-area: management;
+}
+
+.top-content .music {
+	grid-area: music;
+}
+
+.top-content-text {
+	position: absolute;
+	text-align: left;
+	bottom: 0;
+	left: 0;
+	margin: 0 10% 5%;
+}
+
+.top-content-text.minor {
+	margin: 0 5% 3%;
+}
+
+.top-content-text.minor h1 {
+	font-size: 100%;
+}
+
+.top-content-text h1{
+}
+
+.top-content-text-tag {
+	margin-bottom: 3%;
+}
+
+.top-content-text-tag.blue {
+	background: #00b7ff;
+}
+
+.top-content-text-tag.green {
+	background: #7fbe2c;
+}
+
+.top-content-user > * {
+	display: inline-block;
+	vertical-align: middle;
+	line-height: 3em;
+	margin-right: .3em;
+}
+
+.top-content-user img {
+	border-radius: 50%;
+	height: 3vw;
+	margin: 1em 1em 1em 0;
+}
+
+.top-content-user p {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.top-head {
+	align-items: center;
+	border-bottom: thin solid rgba(255, 255, 255, 0.225);
+	padding-bottom: 1em;
+}
+
+.top-head-logo {
+	background: none;
+	width: 20rem;
+	height: 100%;
+
+}
+
+.top-nav {
+	justify-content: space-between;
+	align-items: center;
+	width: 50%;
+	margin: 0 auto;
+	list-style: none
+}
+
+.top-nav li {
+	font: inherit;
+}
+
+.top-nav li a {
+	font: inherit;
+	color: #ffffff;
+	opacity: 0.2;
+	text-decoration: none;
+}
+
+.top-nav li a.active{
+	opacity: 1;
+}
+
+.top-nav li a:not(.active):hover{
+	opacity: 0.7;
+}
+
+
+.wrapper {
+	width: 90vw;
+	display: grid;
+	grid-template-areas: 
+    "top"
+    "main"
+    "sub"
+    "foot";
+	background-color: #19191B;
+	margin: auto;
+}
+
+.wrapperChildPadding {
+	padding: 0rem 3rem;
+	min-width: 800px;
+}
